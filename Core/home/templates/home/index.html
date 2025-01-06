@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+
+
+{% block body %}
+<h1>This is Index Page</h1>
+<!--  -->
+
+<p>
+    {{txt|truncatechars:50}}
+</p>
+
+<p>
+    {% firstof Yam.1 'No fruit available' %}
+</p>
+
+
+{{people}}
+<table class="container">
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Can Vote ?</th>
+    </tr>
+
+    {%for p in person%}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.age}}</td>
+        <td {% if p.age >= 18 %} style="background: green;" {% endif %}>
+            {% if p.age > 18 %}
+            👍
+            {% elif p.age == 18 %}
+            ✋
+            {% else %}
+            👎
+            {% endif %}
+        </td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+<br>
+<hr>
+<p>
+    {% for p in person %}
+        {% if p.age < 22 %}
+            <p>Age : {{p.age}} </p>
+        {% else %}
+            <p>No Age Provided</p>
+        {% endif %}
+    {% endfor %}
+</p>
+<hr>
+<p style="color:red"> Hello this is Html With Color </p>
+{% endblock %}
