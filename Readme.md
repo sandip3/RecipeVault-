@@ -148,12 +148,6 @@
    - Please maintain a respectful code of conduct when contributing to this project.
 
 ---
-
-## **License**
-- This project is licensed under the **MIT License**.
-- You are free to use, modify, and distribute this project as long as you retain the original license.
-
----
 ## **Screenshots**
 
 1. **Recipe View and Search Page**  
