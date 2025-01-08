@@ -165,6 +165,6 @@
 ## **Connect with me:**
 
 - [LinkedIn](https://www.linkedin.com/in/sandip-mishra333/)
-- [GitHub](https://github.com/sandip3/RecipeVault-)
+- [GitHub](https://github.com/sandip3/)
 
 ---
