@@ -2,6 +2,10 @@
 
 {% block body %}
 
+{{ request.user}}
+<br>{{ request.user.first_name }}
+<br>{{ request.user.last_name }}
+
 <div class=" container">
 
     <form method="post" class="col-6 mx-auto card p-4 shadow-lg" enctype="multipart/form-data">

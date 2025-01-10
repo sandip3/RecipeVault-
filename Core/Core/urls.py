@@ -39,9 +39,15 @@ Home_External = [
 urlpatterns += Home_External
 
 Vege_External = [
+    path("register/", register_page, name="Register"),
+    path("login/", login_page, name="Login"),
+    path("logout/", logout_page, name="Logout"),
+
+
     path("receipe/", receipes, name="Receipe app"),
-    path('delete-reseipe/<int:id>/',delete_receipe,name="Delete receipe"),
-    path('update-reseipe/<int:id>/',update_receipe,name="Update receipe"),
+
+    path("delete-reseipe/<int:id>/", delete_receipe, name="Delete receipe"),
+    path("update-reseipe/<int:id>/", update_receipe, name="Update receipe"),
 ]
 
 urlpatterns += Vege_External

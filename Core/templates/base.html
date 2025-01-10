@@ -17,15 +17,37 @@
 
     </head>
 
-    <body class="  container-fluid ">
+    <body class="container-fluid p-3 mb-2 bg-info-subtle text-info-emphasis">
 
-        <br>
-        <hr>
-        <a href="/">Home</a> |
-        <a href="/contect/">Contect</a> |
-        <a href="/about/">About</a>
-        <hr>
-        <br>
+        <nav class=" navbar navbar-expand-lg bg-body-tertiary bg-white shadow mb-5">
+            <div class="container-fluid">
+                <a href="/receipe/" class="navbar-brand">Receipe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contect/">Contect</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about/">About</a>
+                        </li>
+                    </ul>
+                </div>
+                {% if user.is_authenticated %}
+                <a href="/logout/" class="btn btn-warning text-dark rounded-4 shadow border-black">
+                    Logout </a>
+                {% else %}
+                <a href="/login/" class="btn btn-info text-dark rounded-4 shadow border-black ">
+                    Login </a>
+                {% endif %}
+            </div>
+        </nav> 
 
         {% block body %}
 
